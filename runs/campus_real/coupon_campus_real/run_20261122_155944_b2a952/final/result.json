@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "metric": "accuracy",
+  "test_score": 0.7670476941269215,
+  "test_accuracy": 0.7670476941269215,
+  "test_rows": 2537,
+  "candidate_id": 4,
+  "spec": {
+    "family": "hgb_onehot",
+    "variant": "wide",
+    "features": []
+  },
+  "fit_split": "train+val",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\campus_real\\coupon_campus_real\\run_20261122_155944_b2a952"
+}

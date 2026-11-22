@@ -1,0 +1,250 @@
+{
+  "status": "success",
+  "backend": "offline",
+  "strategy": "single",
+  "task": "coupon_oof",
+  "metric": "accuracy",
+  "seed": 42,
+  "max_trials": 5,
+  "notes": [],
+  "best": {
+    "id": 1,
+    "parent_id": 0,
+    "spec": {
+      "family": "hgb_onehot",
+      "variant": "wide",
+      "features": []
+    },
+    "reason": "Deterministic portfolio order",
+    "status": "success",
+    "val_score": 0.7669950738916256,
+    "val_accuracy": 0.7669950738916256,
+    "diagnostic": {
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          600,
+          276
+        ],
+        [
+          197,
+          957
+        ]
+      ]
+    },
+    "seconds": 26.105
+  },
+  "history": [
+    {
+      "id": 0,
+      "parent_id": null,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Fast registered baseline",
+      "status": "success",
+      "val_score": 0.7596059113300493,
+      "val_accuracy": 0.7596059113300493,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            580,
+            296
+          ],
+          [
+            192,
+            962
+          ]
+        ]
+      },
+      "seconds": 16.917
+    },
+    {
+      "id": 1,
+      "parent_id": 0,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "wide",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.7669950738916256,
+      "val_accuracy": 0.7669950738916256,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            600,
+            276
+          ],
+          [
+            197,
+            957
+          ]
+        ]
+      },
+      "seconds": 26.105
+    },
+    {
+      "id": 2,
+      "parent_id": 1,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "compact_leaf",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.7625615763546798,
+      "val_accuracy": 0.7625615763546798,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            581,
+            295
+          ],
+          [
+            187,
+            967
+          ]
+        ]
+      },
+      "seconds": 10.724
+    },
+    {
+      "id": 3,
+      "parent_id": null,
+      "spec": {
+        "family": "extra_trees",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.7591133004926108,
+      "val_accuracy": 0.7591133004926108,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            570,
+            306
+          ],
+          [
+            183,
+            971
+          ]
+        ]
+      },
+      "seconds": 18.737
+    },
+    {
+      "id": 4,
+      "parent_id": null,
+      "spec": {
+        "family": "tabular_lr",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.6640394088669951,
+      "val_accuracy": 0.6640394088669951,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            468,
+            408
+          ],
+          [
+            274,
+            880
+          ]
+        ]
+      },
+      "seconds": 0.397
+    },
+    {
+      "id": 5,
+      "parent_id": 1,
+      "spec": {
+        "family": "oof_blend",
+        "variant": "weighted",
+        "members": [
+          {
+            "family": "hgb_onehot",
+            "variant": "wide",
+            "features": []
+          },
+          {
+            "family": "extra_trees",
+            "variant": "base",
+            "features": []
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "folds": 3
+      },
+      "reason": "Two-family blend, weights selected on training OOF",
+      "status": "success",
+      "val_score": 0.7655172413793103,
+      "val_accuracy": 0.7655172413793103,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            588,
+            288
+          ],
+          [
+            188,
+            966
+          ]
+        ]
+      },
+      "seconds": 38.871
+    }
+  ],
+  "stop_reason": "trial_limit",
+  "failure": null,
+  "seconds": 193.936,
+  "cost": {
+    "n_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "spent_rmb": 0.0,
+    "budget_rmb": 20.0
+  },
+  "cost_basis": "DeepSeek peak uncached rate used by the trial; course-date rate not certified",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\hybrid_upgrade\\coupon_oof\\run_20261122_150056_898e52"
+}

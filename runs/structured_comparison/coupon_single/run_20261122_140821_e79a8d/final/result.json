@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "test_accuracy": 0.7670476941269215,
+  "test_rows": 2537,
+  "candidate_id": 1,
+  "spec": {
+    "family": "hgb_onehot",
+    "variant": "wide"
+  },
+  "fit_split": "train+val",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\structured_comparison\\coupon_single\\run_20261122_140821_e79a8d"
+}

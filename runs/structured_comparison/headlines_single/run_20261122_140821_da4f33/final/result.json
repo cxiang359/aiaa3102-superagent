@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "test_accuracy": 0.6974009900990099,
+  "test_rows": 3232,
+  "candidate_id": 0,
+  "spec": {
+    "family": "pair_word_char",
+    "variant": "base"
+  },
+  "fit_split": "train+val",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\structured_comparison\\headlines_single\\run_20261122_140821_da4f33"
+}

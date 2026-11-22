@@ -1,0 +1,32 @@
+{
+  "status": "success",
+  "mode": "validation_only",
+  "model": "DeepSeek-V4.1-Flash",
+  "best_val_metric": 0.7477832512315271,
+  "best_iter": 0,
+  "history": [
+    {
+      "iter": 0,
+      "change_summary": "Initial complete solution: preprocessing, LR one-hot baseline, LightGBM with native categoricals + 5-fold CV n_estimators selection, val comparison, threshold tuning, artifact saving, and FINAL-mode retraining on train+val for test prediction.",
+      "val": 0.7477832512315271,
+      "outcome": "new best",
+      "code_chars": 6597
+    },
+    {
+      "iter": 1,
+      "change_summary": "Adds CatBoost (native categoricals) and LightGBM to the mix and does an exhaustive subset-average + threshold search on validation for a stronger, more robust ensemble.",
+      "val": 0.7443349753694581,
+      "outcome": "worse - rejected",
+      "code_chars": 6104
+    }
+  ],
+  "cost": {
+    "n_calls": 5,
+    "input_tokens": 26522,
+    "output_tokens": 20284,
+    "spent_rmb": 0.2153,
+    "budget_rmb": 1.0
+  },
+  "out_of_budget": false,
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\task1_campus_trial\\run_20261122_132426"
+}

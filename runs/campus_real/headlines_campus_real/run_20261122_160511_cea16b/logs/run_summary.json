@@ -1,0 +1,257 @@
+{
+  "status": "success",
+  "backend": "campus",
+  "strategy": "single",
+  "task": "headlines_campus_real",
+  "metric": "accuracy",
+  "seed": 42,
+  "max_trials": 5,
+  "notes": [],
+  "best": {
+    "id": 0,
+    "parent_id": null,
+    "spec": {
+      "family": "pair_word_char",
+      "variant": "base",
+      "features": []
+    },
+    "reason": "Fast registered baseline",
+    "status": "success",
+    "val_score": 0.7053191489361702,
+    "val_accuracy": 0.7053191489361702,
+    "diagnostic": {
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          322,
+          137
+        ],
+        [
+          140,
+          341
+        ]
+      ]
+    },
+    "swap_consistency": 0.9989361702127659,
+    "seconds": 7.876
+  },
+  "history": [
+    {
+      "id": 0,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Fast registered baseline",
+      "status": "success",
+      "val_score": 0.7053191489361702,
+      "val_accuracy": 0.7053191489361702,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            322,
+            137
+          ],
+          [
+            140,
+            341
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 7.876
+    },
+    {
+      "id": 1,
+      "parent_id": 0,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "c03",
+        "features": []
+      },
+      "reason": "Refines the successful word+char baseline with stronger regularization (C=0.3), a single controlled change.",
+      "status": "success",
+      "val_score": 0.6968085106382979,
+      "val_accuracy": 0.6968085106382979,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            312,
+            147
+          ],
+          [
+            138,
+            343
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 7.477
+    },
+    {
+      "id": 2,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_word",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Pair_word is a diverse, strong baseline family not yet explored.",
+      "status": "success",
+      "val_score": 0.6829787234042554,
+      "val_accuracy": 0.6829787234042554,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            308,
+            151
+          ],
+          [
+            147,
+            334
+          ]
+        ]
+      },
+      "swap_consistency": 0.9946808510638298,
+      "seconds": 2.007
+    },
+    {
+      "id": 3,
+      "parent_id": 0,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "c3",
+        "features": []
+      },
+      "reason": "Best observed family is pair_word_char, and c3 is a controlled refinement of its base model.",
+      "status": "success",
+      "val_score": 0.6893617021276596,
+      "val_accuracy": 0.6893617021276596,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            316,
+            143
+          ],
+          [
+            149,
+            332
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 7.696
+    },
+    {
+      "id": 4,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_char",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Char n-grams offer a diverse, robust text baseline likely competitive with observed word-char models.",
+      "status": "success",
+      "val_score": 0.6968085106382979,
+      "val_accuracy": 0.6968085106382979,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            310,
+            149
+          ],
+          [
+            136,
+            345
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 5.691
+    },
+    {
+      "id": 5,
+      "parent_id": 0,
+      "spec": {
+        "family": "oof_blend",
+        "variant": "weighted",
+        "members": [
+          {
+            "family": "pair_word_char",
+            "variant": "base",
+            "features": []
+          },
+          {
+            "family": "pair_char",
+            "variant": "base",
+            "features": []
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "folds": 3
+      },
+      "reason": "Two-family blend, weights selected on training OOF",
+      "status": "success",
+      "val_score": 0.6957446808510638,
+      "val_accuracy": 0.6957446808510638,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            312,
+            147
+          ],
+          [
+            139,
+            342
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 13.634
+    }
+  ],
+  "stop_reason": "trial_limit",
+  "failure": null,
+  "seconds": 119.965,
+  "cost": {
+    "n_calls": 4,
+    "input_tokens": 2446,
+    "output_tokens": 2345,
+    "spent_rmb": 0.0237,
+    "budget_rmb": 1.0
+  },
+  "cost_basis": "DeepSeek peak uncached rate used by the trial; course-date rate not certified",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\campus_real\\headlines_campus_real\\run_20261122_160511_cea16b"
+}

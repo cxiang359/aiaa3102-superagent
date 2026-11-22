@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "metric": "accuracy",
+  "test_score": 0.6974009900990099,
+  "test_accuracy": 0.6974009900990099,
+  "test_rows": 3232,
+  "candidate_id": 0,
+  "spec": {
+    "family": "pair_word_char",
+    "variant": "base",
+    "features": []
+  },
+  "fit_split": "train+val",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\campus_real\\headlines_campus_real\\run_20261122_160511_cea16b"
+}

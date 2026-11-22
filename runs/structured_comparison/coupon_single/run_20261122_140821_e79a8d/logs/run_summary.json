@@ -1,0 +1,95 @@
+{
+  "status": "success",
+  "backend": "offline",
+  "strategy": "single",
+  "task": "coupon_single",
+  "metric": "accuracy",
+  "seed": 42,
+  "max_trials": 5,
+  "best": {
+    "id": 1,
+    "parent_id": 0,
+    "spec": {
+      "family": "hgb_onehot",
+      "variant": "wide"
+    },
+    "reason": "Deterministic portfolio order",
+    "status": "success",
+    "val_accuracy": 0.7669950738916256,
+    "seconds": 3.97
+  },
+  "history": [
+    {
+      "id": 0,
+      "parent_id": null,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "base"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.7596059113300493,
+      "seconds": 4.228
+    },
+    {
+      "id": 1,
+      "parent_id": 0,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "wide"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.7669950738916256,
+      "seconds": 3.97
+    },
+    {
+      "id": 2,
+      "parent_id": 1,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "compact_leaf"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.7625615763546798,
+      "seconds": 2.468
+    },
+    {
+      "id": 3,
+      "parent_id": null,
+      "spec": {
+        "family": "extra_trees",
+        "variant": "base"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.7591133004926108,
+      "seconds": 13.79
+    },
+    {
+      "id": 4,
+      "parent_id": null,
+      "spec": {
+        "family": "tabular_lr",
+        "variant": "base"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.6640394088669951,
+      "seconds": 0.27
+    }
+  ],
+  "stop_reason": "trial_limit",
+  "failure": null,
+  "seconds": 24.889,
+  "cost": {
+    "n_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "spent_rmb": 0.0,
+    "budget_rmb": 1.0
+  },
+  "cost_basis": "DeepSeek peak uncached rate used by the trial; course-date rate not certified",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\structured_comparison\\coupon_single\\run_20261122_140821_e79a8d"
+}

@@ -1,0 +1,101 @@
+{
+  "status": "success",
+  "backend": "offline",
+  "strategy": "single",
+  "task": "headlines_single",
+  "metric": "accuracy",
+  "seed": 42,
+  "max_trials": 5,
+  "best": {
+    "id": 0,
+    "parent_id": null,
+    "spec": {
+      "family": "pair_word_char",
+      "variant": "base"
+    },
+    "reason": "Deterministic portfolio order",
+    "status": "success",
+    "val_accuracy": 0.7053191489361702,
+    "swap_consistency": 0.9989361702127659,
+    "seconds": 10.342
+  },
+  "history": [
+    {
+      "id": 0,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "base"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.7053191489361702,
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 10.342
+    },
+    {
+      "id": 1,
+      "parent_id": 0,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "c3"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.6893617021276596,
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 9.909
+    },
+    {
+      "id": 2,
+      "parent_id": 0,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "c03"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.6968085106382979,
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 9.787
+    },
+    {
+      "id": 3,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_word",
+        "variant": "base"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.6829787234042554,
+      "swap_consistency": 0.9946808510638298,
+      "seconds": 2.33
+    },
+    {
+      "id": 4,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_char",
+        "variant": "base"
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_accuracy": 0.6968085106382979,
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 6.632
+    }
+  ],
+  "stop_reason": "trial_limit",
+  "failure": null,
+  "seconds": 39.078,
+  "cost": {
+    "n_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "spent_rmb": 0.0,
+    "budget_rmb": 1.0
+  },
+  "cost_basis": "DeepSeek peak uncached rate used by the trial; course-date rate not certified",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\structured_comparison\\headlines_single\\run_20261122_140821_da4f33"
+}

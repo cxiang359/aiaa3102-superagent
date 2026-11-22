@@ -1,0 +1,2 @@
+{"ts": "2026-11-22 12:33:44", "call_index": 1, "stage": "plan", "model": "DeepSeek-V4.1-Flash", "input_tokens": 5499, "output_tokens": 1804, "cost_rmb": 0.02543, "cumulative_cost_rmb": 0.02543}
+{"ts": "2026-11-22 12:36:05", "call_index": 2, "stage": "draft", "model": "DeepSeek-V4.1-Flash", "input_tokens": 6285, "output_tokens": 8192, "cost_rmb": 0.078106, "cumulative_cost_rmb": 0.103536}

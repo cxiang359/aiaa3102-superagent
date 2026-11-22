@@ -1,0 +1,257 @@
+{
+  "status": "success",
+  "backend": "offline",
+  "strategy": "single",
+  "task": "headlines_oof",
+  "metric": "accuracy",
+  "seed": 42,
+  "max_trials": 5,
+  "notes": [],
+  "best": {
+    "id": 0,
+    "parent_id": null,
+    "spec": {
+      "family": "pair_word_char",
+      "variant": "base",
+      "features": []
+    },
+    "reason": "Fast registered baseline",
+    "status": "success",
+    "val_score": 0.7053191489361702,
+    "val_accuracy": 0.7053191489361702,
+    "diagnostic": {
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          322,
+          137
+        ],
+        [
+          140,
+          341
+        ]
+      ]
+    },
+    "swap_consistency": 0.9989361702127659,
+    "seconds": 19.394
+  },
+  "history": [
+    {
+      "id": 0,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Fast registered baseline",
+      "status": "success",
+      "val_score": 0.7053191489361702,
+      "val_accuracy": 0.7053191489361702,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            322,
+            137
+          ],
+          [
+            140,
+            341
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 19.394
+    },
+    {
+      "id": 1,
+      "parent_id": 0,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "c3",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.6893617021276596,
+      "val_accuracy": 0.6893617021276596,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            316,
+            143
+          ],
+          [
+            149,
+            332
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 18.649
+    },
+    {
+      "id": 2,
+      "parent_id": 0,
+      "spec": {
+        "family": "pair_word_char",
+        "variant": "c03",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.6968085106382979,
+      "val_accuracy": 0.6968085106382979,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            312,
+            147
+          ],
+          [
+            138,
+            343
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 16.445
+    },
+    {
+      "id": 3,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_word",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.6829787234042554,
+      "val_accuracy": 0.6829787234042554,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            308,
+            151
+          ],
+          [
+            147,
+            334
+          ]
+        ]
+      },
+      "swap_consistency": 0.9946808510638298,
+      "seconds": 4.418
+    },
+    {
+      "id": 4,
+      "parent_id": null,
+      "spec": {
+        "family": "pair_char",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Deterministic portfolio order",
+      "status": "success",
+      "val_score": 0.6968085106382979,
+      "val_accuracy": 0.6968085106382979,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            310,
+            149
+          ],
+          [
+            136,
+            345
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 12.569
+    },
+    {
+      "id": 5,
+      "parent_id": 0,
+      "spec": {
+        "family": "oof_blend",
+        "variant": "weighted",
+        "members": [
+          {
+            "family": "pair_word_char",
+            "variant": "base",
+            "features": []
+          },
+          {
+            "family": "pair_char",
+            "variant": "base",
+            "features": []
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "folds": 3
+      },
+      "reason": "Two-family blend, weights selected on training OOF",
+      "status": "success",
+      "val_score": 0.6957446808510638,
+      "val_accuracy": 0.6957446808510638,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            312,
+            147
+          ],
+          [
+            139,
+            342
+          ]
+        ]
+      },
+      "swap_consistency": 0.9989361702127659,
+      "seconds": 29.869
+    }
+  ],
+  "stop_reason": "trial_limit",
+  "failure": null,
+  "seconds": 155.743,
+  "cost": {
+    "n_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "spent_rmb": 0.0,
+    "budget_rmb": 20.0
+  },
+  "cost_basis": "DeepSeek peak uncached rate used by the trial; course-date rate not certified",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\hybrid_upgrade\\headlines_oof\\run_20261122_150056_033f94"
+}

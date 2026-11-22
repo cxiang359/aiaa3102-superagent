@@ -1,0 +1,258 @@
+{
+  "status": "success",
+  "backend": "campus",
+  "strategy": "single",
+  "task": "coupon_campus_real",
+  "metric": "accuracy",
+  "seed": 42,
+  "max_trials": 5,
+  "notes": [],
+  "best": {
+    "id": 4,
+    "parent_id": 3,
+    "spec": {
+      "family": "hgb_onehot",
+      "variant": "wide",
+      "features": []
+    },
+    "reason": "Refines the best-performing hgb_onehot compact_leaf model with a wide variant, a single meaningful change.",
+    "status": "success",
+    "val_score": 0.7669950738916256,
+    "val_accuracy": 0.7669950738916256,
+    "diagnostic": {
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          600,
+          276
+        ],
+        [
+          197,
+          957
+        ]
+      ]
+    },
+    "seconds": 3.412
+  },
+  "history": [
+    {
+      "id": 0,
+      "parent_id": null,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Fast registered baseline",
+      "status": "success",
+      "val_score": 0.7596059113300493,
+      "val_accuracy": 0.7596059113300493,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            580,
+            296
+          ],
+          [
+            192,
+            962
+          ]
+        ]
+      },
+      "seconds": 4.872
+    },
+    {
+      "id": 1,
+      "parent_id": 0,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "base",
+        "features": [
+          {
+            "op": "interaction",
+            "columns": [
+              "feature_0",
+              "feature_1"
+            ]
+          }
+        ]
+      },
+      "reason": "Pairwise interaction may capture nonlinear joint effects improving classification accuracy.",
+      "status": "success",
+      "val_score": 0.7546798029556651,
+      "val_accuracy": 0.7546798029556651,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            579,
+            297
+          ],
+          [
+            201,
+            953
+          ]
+        ]
+      },
+      "seconds": 2.773
+    },
+    {
+      "id": 2,
+      "parent_id": null,
+      "spec": {
+        "family": "extra_trees",
+        "variant": "base",
+        "features": []
+      },
+      "reason": "Extra Trees adds a diverse tree family and is promising for tabular accuracy.",
+      "status": "success",
+      "val_score": 0.7591133004926108,
+      "val_accuracy": 0.7591133004926108,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            570,
+            306
+          ],
+          [
+            183,
+            971
+          ]
+        ]
+      },
+      "seconds": 12.505
+    },
+    {
+      "id": 3,
+      "parent_id": 0,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "compact_leaf",
+        "features": []
+      },
+      "reason": "Compact-leaf HGB is a regularized refinement of the best-performing one-hot HGB, likely improving generalization.",
+      "status": "success",
+      "val_score": 0.7625615763546798,
+      "val_accuracy": 0.7625615763546798,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            581,
+            295
+          ],
+          [
+            187,
+            967
+          ]
+        ]
+      },
+      "seconds": 2.387
+    },
+    {
+      "id": 4,
+      "parent_id": 3,
+      "spec": {
+        "family": "hgb_onehot",
+        "variant": "wide",
+        "features": []
+      },
+      "reason": "Refines the best-performing hgb_onehot compact_leaf model with a wide variant, a single meaningful change.",
+      "status": "success",
+      "val_score": 0.7669950738916256,
+      "val_accuracy": 0.7669950738916256,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            600,
+            276
+          ],
+          [
+            197,
+            957
+          ]
+        ]
+      },
+      "seconds": 3.412
+    },
+    {
+      "id": 5,
+      "parent_id": 4,
+      "spec": {
+        "family": "oof_blend",
+        "variant": "weighted",
+        "members": [
+          {
+            "family": "hgb_onehot",
+            "variant": "wide",
+            "features": []
+          },
+          {
+            "family": "extra_trees",
+            "variant": "base",
+            "features": []
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ],
+        "folds": 3
+      },
+      "reason": "Two-family blend, weights selected on training OOF",
+      "status": "success",
+      "val_score": 0.7655172413793103,
+      "val_accuracy": 0.7655172413793103,
+      "diagnostic": {
+        "labels": [
+          "0",
+          "1"
+        ],
+        "confusion_matrix": [
+          [
+            588,
+            288
+          ],
+          [
+            188,
+            966
+          ]
+        ]
+      },
+      "seconds": 15.558
+    }
+  ],
+  "stop_reason": "trial_limit",
+  "failure": null,
+  "seconds": 110.522,
+  "cost": {
+    "n_calls": 4,
+    "input_tokens": 2760,
+    "output_tokens": 1915,
+    "spent_rmb": 0.0208,
+    "budget_rmb": 1.0
+  },
+  "cost_basis": "DeepSeek peak uncached rate used by the trial; course-date rate not certified",
+  "run_dir": "C:\\Users\\33075\\Desktop\\学\\课程\\python programming\\作业\\Final Project\\SuperAgent-main\\SuperAgent-main\\runs\\campus_real\\coupon_campus_real\\run_20261122_155944_b2a952"
+}

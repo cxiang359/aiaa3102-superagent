@@ -1,0 +1,29 @@
+# Environment and secrets
+.env
+.env.*
+*.env
+
+# Temporary and generated runtime output
+temp/
+tmp/
+runs/
+
+# Dynamic execution artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage/
+htmlcov/
+*.joblib
+*.pkl
+*.pickle
+catboost_info/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
